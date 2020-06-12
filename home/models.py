@@ -22,7 +22,7 @@ class Product(models.Model):
 class Cart(models.Model):
     product = models.ForeignKey(Product, on_delete=CASCADE)
     is_owned = models.BooleanField(default=False)
-    user = models.ForeignKey(User, on_delete=CASCADE)
+    user = models.ForeignKey(User, on_delete=CASCADE, null=True, blank=True)
     status = models.CharField(max_length=20, default='pending')
     date = models.DateField(auto_now_add=True, null=True, blank=True)
 
