@@ -8,13 +8,12 @@ def home(request):
     dishwasher = Product.objects.all().filter(category='dishwasher')[:8]
     lightning = Product.objects.all().filter(category='lightning')[:8]
     mattress = Product.objects.all().filter(category='mattress')[:8]
-    carts = Cart.objects.filter(user=request.user.id)
     topRated = Product.objects.all()[1:2:3]
     context = {'dishwasher':dishwasher,
                'mattress':mattress,
                'lightning':lightning,
                'topRated':topRated,
-               'carts':len(carts)
+              
                
                }
     
