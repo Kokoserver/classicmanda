@@ -117,8 +117,8 @@
             </div>
         </div>
 
-        <div class="product-area pb-40 pl-70 pr-70">
-            <div class="container-fluid">
+        <div class="product-area">
+            <div class="container">
                 <div class="section-title-tab-wrap">
                     <div class="row">
                         <div class="col-xl-6 col-lg-4 col-md-4 col-sm-4">
@@ -141,11 +141,14 @@
                         </div>
                     </div>
                 </div>
-                <div class="tab-content jump">
-                    <div id="product-10" class="tab-pane active">
+                </div>
+                </div>
+              
+                <div class="tab-content container jump">
+                    <div id="product-10" class="tab-pane ">
                         <div class="row text-left">
                             {%for light in lightning %}
-                            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
+                            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
                                 <div class="product-wrap product-border-3 product-img-zoom mb-30">
                                     <div class="product-img">
                                         <a href="{% url 'product' light.id %}"><img src="{% static light.image %}" alt="product"></a>
@@ -155,11 +158,11 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="product-content product-content-padding">
+                                    <div class="product-content product-content-padding text-center">
                                         <h4><a href="{% url 'product' light.id %}">{{light.name}}</a></h4>
                                         <div class="price-addtocart">
                                             <div class="product-price text-center">
-                                                <span>${{light.price}}</span>
+                                                <span class="ml-90">${{light.price}}</span>
                                             </div>
                                         </div>
                                     </div>
@@ -168,24 +171,24 @@
                             {%endfor%}
                         </div>
                     </div>
-                    <div id="product-11" class="tab-pane">
+                    <div id="product-11" class="tab-pane active">
                         <div class="row">
                             {%for dish in dishwasher %}
-                            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
+                            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
                                 <div class="product-wrap product-border-3 product-img-zoom mb-30">
                                     <div class="product-img">
-                                        <a href="{% url 'product' dish.id %}"><img src="{% static dish.image %}" alt="product"></a>
+                                        <a href="{% url 'product' dish.id %}"><img src="{% static dish.image %}"  alt="product"></a>
                                         <div class="product-action-4">
                                             <div class="product-action-4-style">
                                                 <a data-tooltip="Add To Cart" href="#" id="addToCart"><i class="la la-cart-plus"></i></a>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="product-content product-content-padding">
+                                    <div class="product-content product-content-padding text-center">
                                         <h4><a href="{% url 'product' dish.id %}">{{dish.name}}</a></h4>
                                         <div class="price-addtocart">
                                             <div class="product-price">
-                                                <span>${{dish.price}}</span>
+                                                <span class="ml-90">${{dish.price}}</span>
                                             </div>
                                         </div>
                                     </div>
@@ -197,21 +200,21 @@
                     <div id="product-12" class="tab-pane">
                         <div class="row">
                             {%for mat in mattress %}
-                            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
+                            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
                                 <div class="product-wrap product-border-3 product-img-zoom mb-30">
                                     <div class="product-img">
-                                        <a href="{% url 'product' mat.id %}"><img src="{% static mat.image %}" alt="product"></a>
+                                        <a href="{% url 'product' mat.id %}"><img src="{% static mat.image %}"  alt="product"></a>
                                         <div class="product-action-4">
                                             <div class="product-action-4-style">
                                                 <a data-tooltip="Add To Cart" href="#" id="addToCart"><i class="la la-cart-plus"></i></a>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="product-content product-content-padding">
+                                    <div class="product-content product-content-padding text-center" >
                                         <h4><a href="{% url 'product' mat.id %}">{{mat.name}}</a></h4>
                                         <div class="price-addtocart">
                                             <div class="product-price">
-                                                <span>${{mat.price}}</span>
+                                                <span class="ml-90">${{mat.price}}</span>
                                             </div>
                                         </div>
                                     </div>
@@ -241,7 +244,7 @@
                                 <h4><a href="{% url 'product' topRated.id %}">{{topRated.name}}</a></h4>
                                 <div class="price-addtocart">
                                     <div class="product-price">
-                                        <span>${{topRated.price}}</span>
+                                        <span class="ml-90">${{topRated.price}}</span>
                                     </div>
                                 </div>
                             </div>
@@ -249,7 +252,7 @@
                         </div>
                     </div>
                     {% endfor%}
-                           
+                     </div>      
             </div>
         </div>
         <div class="brand-logo-area pb-100">

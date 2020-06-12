@@ -10398,6 +10398,15 @@ button, input, optgroup, select, textarea {
   margin-bottom: 33px;
 }
 
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .section-title-tab-wrap {
+    margin-left: 20rem;
+    margin-right: 20rem;
+  }
+}
+
+
 .single-recent-selling {
   display: -webkit-box;
   display: -webkit-flex;
