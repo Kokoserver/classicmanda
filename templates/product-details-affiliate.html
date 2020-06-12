@@ -1,0 +1,99 @@
+{% extends 'base.html' %}
+{% load static%}
+{% block content%}
+        <div class="product-details-area pt-90 pb-10">
+            <div class="container">
+                <div class="row text-center">
+                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
+                        <div class="product-details-img-left">
+                            <img class="zoompro" src="{% static product.image %}" style="width: 250px;" data-zoom-image="{% static item.image %}" alt="product-details-img">
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <div class="product-details-content pro-details-content-modify">
+                            
+                            <h2 class="text-center">{{product.name}}</h2>
+                            <div class="product-ratting-review">
+                                <div class="product-ratting">
+                                    <i class="la la-star"></i>
+                                    <i class="la la-star"></i>
+                                    <i class="la la-star"></i>
+                                    <i class="la la-star"></i>
+                                    <i class="la la-star-half-o"></i>
+                                </div>
+                                <div class="product-review">
+                                    <span>40+Reviews</span>
+                                </div>
+                            </div>
+                            <div class="pro-details-price-wrap">
+                                <div class="product-price">
+                                    <span>${{product.price}}</span>
+                                </div>
+                                <div class="dec-rang"><span>- 30%</span></div>
+                                
+                            </div>
+                            <div class="pro-details-buy-now btn-hover btn-hover-radious">
+                                <a href="{% url 'cart'  product.id%}">Buy Now</a>
+                            </div>
+                        </div>
+                    </div>
+                   
+                </div>
+            </div>
+        </div>
+        <div class="description-review-wrapper pb-90">
+            <div class="container">
+                <div class="row">
+                    <div class="ml-auto mr-auto col-lg-10">
+                        <div class="dec-review-topbar nav mb-10 text-center">
+                            <a>Description</a>
+                        </div>
+                        <div class="tab-content dec-review-bottom">
+                                <div class="description-wrap" style="overflow-wrap: break-word;">
+                                    <p>{{product.details}}</p>
+                                </div>
+                            </div>
+            </div>
+        </div>
+ 
+        <div class="product-area  pt-30 mt-20">
+            <div class="container">
+                <div class="section-title-6 mb-50 text-center">
+                    <h2>Related Product</h2>
+                </div>
+                <div class="product-slider-active owl-carousel">
+                 {% for item in category%}
+                 <div class="product-wrap">
+                    <div class="product-img mb-15">
+                        <a href="{% url 'product' item.id%}"><img src="{% static item.image %}" alt="product"></a>
+                        <div class="product-action">
+                            <a data-toggle="modal" data-target="#exampleModal" title="Quick View" href="{% url 'cart'  item.id %}"><i class="la la-plus"></i></a>
+                        </div>
+                    </div>
+                    <div class="product-content">
+                        <span>{{item.category}}</span>
+                        <h4><a href="{% url 'product' item.id%}">{{item.name}}</a></h4>
+                        <div class="price-addtocart">
+                            <div class="product-price">
+                                <span>${{item.price}}</span>
+                            </div>
+                            <div class="product-addtocart">
+                                <a title="Add To Cart" href="{% url 'cart'  item.id %}">+ Add To Cart</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                 {% endfor%}
+               
+            </div>
+        </div>
+
+    
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+{% endblock%}

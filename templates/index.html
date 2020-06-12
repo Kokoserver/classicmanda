@@ -1,0 +1,280 @@
+{%extends 'base.html'%}
+{%load static%}
+{% block content%}
+<div class="my-account-wrapper pt-20 pb-100">
+    <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-6">{% include 'alert.html'%}</div>
+        <div class="col-md-2"></div>
+    </div>
+
+        <div class="slider-banner-wrap">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8">
+                        <div class="slider-area">
+                            <div class="slider-active-4 owl-carousel dot-style-2">
+                                <div class="single-slider-5 bg-img slider-height-5 res-white-overly-xs" style="background-image:url({% static 'images/slider/b4.jpg'%});">
+                                    <div class="slider-content-5  slider-animated-2">
+                                        <h1 class="animated">Designer Interior <span>lighting</span></h1>
+                                        <p class="animated">Our lighting products are top quality</p>
+                                        <p class="animated">Now Only <b>$8100.30 </b></p>
+                                        <div class="slider-btn-5 btn-hover btn-hover-radious">
+                                            <a class="animated" href="{% url 'lightning'%}">SHOP NOW</a>
+                                        </div>
+                                    </div>
+                                </div>
+                               
+                               
+                                <div class="single-slider-5 bg-img slider-height-5 res-white-overly-xs" style="background-image:url({% static 'images/slider/b3.jpg'%});">
+                                    <div class="slider-content-5  slider-animated-2">
+                                        <h2 class="animated">Find Quality Dishwasher without <br> breaking the<span>bank.</span></h2>
+                                        <p class="animated">Starting at <b>$940.90</b></p>
+                                        <div class="slider-btn-5 btn-hover btn-hover-radious">
+                                            <a class="animated" href="{% url 'dishwasher'%}">SHOP NOW</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="single-slider-5 bg-img slider-height-5 res-white-overly-xs" style="background-image:url({% static 'images/slider/b5.jpg'%});">
+                                    <div class="slider-content-5  slider-animated-2">
+                                        <h1 class="animated">Order a safe<span>deposit box!</span></h1>
+                                        <p class="animated">Fire Resistive Cabinets, Buy online today.</p>
+                                        <div class="slider-btn-5 btn-hover btn-hover-radious">
+                                            <a class="animated" href="{% url 'vault'%}">SHOP NOW</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                   
+                    <div class="col-lg-4">
+                        <div class="banner-h5-wrap">
+                            <div class="row">
+                                <div class="col-lg-12 col-md-6 mb-3">
+                                    <div class="banner-wrap mb-20">
+                                        <a href="{% url 'bequipment'%}">
+                                            <img src="{% static 'images/slider/b2.jpg'%}" alt="banner" style="height: 48.5vh;" >
+                                        </a>
+                                        <div class="banner-content-7 text-center">
+                                            <h3>Building Equipments <br>Starting From $690.00</h3>
+                                               
+                                                <a href="{% url 'bequipment'%}" class="pb-10">Shop Now</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-lg-12 col-md-6">
+                                    <div class="banner-wrap">
+                                        <a href="{% url 'bateriesandpanels'%}">
+                                            <img src="{% static 'images/slider/b1.jpg'%}" alt="banner" style="height: 36.5vh;">
+                                        </a>
+                                        <div class="banner-content-7">
+                                            <h3>Special Offer!</span></h3>
+                                            <p>Always save 5% on every order. Easy &amp; convenient..</p>
+                                            <a href="{% url 'bateriesandpanels'%}">Shop Now</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="banner-area pt-50 pb-70">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-md-12 col-sm-12">
+                        <div class="banner-wrap mb-30">
+                            <a href="{% url 'lightning'%}">
+                                <img src="{% static 'images/slider/feature2.jpg'%}" alt="banner">
+                            </a>
+                            <div class="banner-content-6 mt-2">
+                                <h2>PENDANT LIGHTING</h2>
+                                <h5>Enormous choice in indoor</h5>
+                                <h6>Pendant lights.</h6>
+                                <h4>Order Now!</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12 col-sm-12">
+                        <div class="banner-wrap mb-30">
+                            <a href="{% url 'mattress'%}">
+                                <img src="{% static 'images/slider/feature1.jpg'%}" alt="banner">
+                            </a>
+                            <div class="banner-content-6 mt-2">
+                                <h2>Our collection of classic lighting</h2>
+                                <h5>encompasses traditional and</h5>
+                                <h5>timeless fittings</h5>
+                                <h3>Price From $759.99</h3>
+                            </div>
+                        </div>
+                    </div>
+                   
+                </div>
+            </div>
+        </div>
+
+        <div class="product-area pb-40 pl-70 pr-70">
+            <div class="container-fluid">
+                <div class="section-title-tab-wrap">
+                    <div class="row">
+                        <div class="col-xl-6 col-lg-4 col-md-4 col-sm-4">
+                            <div class="section-title-5">
+                                <h3>Popular Categories</h3>
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-8 col-md-8 col-sm-12">
+                            <div class="product-tab-list-4 nav">
+                                <a href="#product-10" data-toggle="tab">
+                                    <h5>Lightning</h5>
+                                </a>
+                                <a class="active" href="#product-11" data-toggle="tab">
+                                    <h5>Dishwasher</h5>
+                                </a>
+                                <a href="#product-12" data-toggle="tab">
+                                    <h5>Mattress</h5>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-content jump">
+                    <div id="product-10" class="tab-pane active">
+                        <div class="row text-left">
+                            {%for light in lightning %}
+                            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
+                                <div class="product-wrap product-border-3 product-img-zoom mb-30">
+                                    <div class="product-img">
+                                        <a href="{% url 'product' light.id %}"><img src="{% static light.image %}" alt="product"></a>
+                                        <div class="product-action-4">
+                                            <div class="product-action-4-style">
+                                                <a class=""  data-tooltip="Add To Cart" id="AddToCart"><i  class="la la-cart-plus"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="product-content product-content-padding">
+                                        <h4><a href="{% url 'product' light.id %}">{{light.name}}</a></h4>
+                                        <div class="price-addtocart">
+                                            <div class="product-price text-center">
+                                                <span>${{light.price}}</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            {%endfor%}
+                        </div>
+                    </div>
+                    <div id="product-11" class="tab-pane">
+                        <div class="row">
+                            {%for dish in dishwasher %}
+                            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
+                                <div class="product-wrap product-border-3 product-img-zoom mb-30">
+                                    <div class="product-img">
+                                        <a href="{% url 'product' dish.id %}"><img src="{% static dish.image %}" alt="product"></a>
+                                        <div class="product-action-4">
+                                            <div class="product-action-4-style">
+                                                <a data-tooltip="Add To Cart" href="#" id="addToCart"><i class="la la-cart-plus"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="product-content product-content-padding">
+                                        <h4><a href="{% url 'product' dish.id %}">{{dish.name}}</a></h4>
+                                        <div class="price-addtocart">
+                                            <div class="product-price">
+                                                <span>${{dish.price}}</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            {%endfor%}
+                        </div>
+                    </div>
+                    <div id="product-12" class="tab-pane">
+                        <div class="row">
+                            {%for mat in mattress %}
+                            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
+                                <div class="product-wrap product-border-3 product-img-zoom mb-30">
+                                    <div class="product-img">
+                                        <a href="{% url 'product' mat.id %}"><img src="{% static mat.image %}" alt="product"></a>
+                                        <div class="product-action-4">
+                                            <div class="product-action-4-style">
+                                                <a data-tooltip="Add To Cart" href="#" id="addToCart"><i class="la la-cart-plus"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="product-content product-content-padding">
+                                        <h4><a href="{% url 'product' mat.id %}">{{mat.name}}</a></h4>
+                                        <div class="price-addtocart">
+                                            <div class="product-price">
+                                                <span>${{mat.price}}</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            {%endfor%}
+                        </div>
+                    </div>
+                  
+            </div>
+        </div>
+        <div class="product-area pb-70">
+            <div class="container">
+                <div class="row">
+                    {% for topRated in topRated%}
+                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
+                        <div class="product-wrap product-border-3 product-img-zoom mb-30">
+                            <div class="product-img">
+                                <a href="{% url 'product' topRated.id%}"><img src="{% static topRated.image %}"></a>
+                                <div class="product-action-4">
+                                    <div class="product-action-4-style">
+                                        <a class=""  data-tooltip="Add To Cart" id="AddToCart"><i  class="la la-cart-plus"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-content product-content-padding text-center">
+                                <h4><a href="{% url 'product' topRated.id %}">{{topRated.name}}</a></h4>
+                                <div class="price-addtocart">
+                                    <div class="product-price">
+                                        <span>${{topRated.price}}</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    {% endfor%}
+                           
+            </div>
+        </div>
+        <div class="brand-logo-area pb-100">
+            <div class="container">
+                <div class="brand-logo-active-2 owl-carousel">
+                    <div class="single-brand-logo">
+                        <img src="{% static 'images/brand-logo/brand-logo-5.png'%}" alt="">
+                    </div>
+                    <div class="single-brand-logo">
+                        <img src="{% static 'images/brand-logo/brand-logo-6.png'%}" alt="">
+                    </div>
+                    <div class="single-brand-logo">
+                        <img src="{% static 'images/brand-logo/brand-logo-7.png'%}" alt="">
+                    </div>
+                    <div class="single-brand-logo">
+                        <img src="{% static 'images/brand-logo/brand-logo-8.png'%}" alt="">
+                    </div>
+                    <div class="single-brand-logo">
+                        <img src="{% static 'images/brand-logo/brand-logo-9.png'%}" alt="">
+                    </div>
+                    <div class="single-brand-logo">
+                        <img src="{% static 'images/brand-logo/brand-logo-6.png'%}" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+       
+        {% endblock %}

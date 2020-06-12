@@ -1,0 +1,25 @@
+{% extends 'base.html'%}
+{%load static%}
+{% block content%}
+ <div class="container pt-50 pb-50">
+     <div class="row">
+         <div class="col-md-2"></div>
+         <div class="col-md-8">
+           <h3 class="text-dark mb-5">Delivery information</h3>
+            <P class="text-left">
+                Let our installation team take the hard work out of buying a new equipments / home appliance. We offer a range of installation and disposal services across our assortment of products and our installation services is offer locally and globally. At the same time you purchase your product, you can organise to have it installed and setup, knowing that all these services will be carried out by qualified professionals and come fully guaranteed. Talk about peace of mind.
+
+            </P>
+            <P class="text-left">
+               
+                Our delivery and installation crews are OUR team members. We do not contract out our deliveries. This gives us better control of the experience that you get on delivery day. Our drivers and installers have been trained, as well as certified by the manufactures to make sure that your products are installed properly.
+               
+            </P>
+             <a href="{% url 'contact'%}" class="btn btn-outline-primary btn-lg px-5 py-3  mt-4">Contact Us</a>
+         </div>
+         <div class="col-md-2"></div>
+
+        
+     </div>
+ </div>
+        {% endblock%}

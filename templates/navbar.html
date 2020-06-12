@@ -1,0 +1,189 @@
+{%load static%}
+<div class="main-wrapper">
+    <header class="header-area header-padding-4">
+        <div class="main-header-wrap">
+            <div class="header-top pt-10 pb-10 bg-black-3">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <div class="welcome">
+                                <p>Welcome to our shop Classicmanda</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-8">
+                            <div class="setting-wrap-2">
+                                <div class="setting-content2-left">
+                                    <a class="currency-dropdown-active" href="#">USD <i class="la la-angle-down"></i></a>
+                                    <div class="currency-dropdown">
+                                        <ul>
+                                            <li><a href="#">USD</a></li>
+                                            <li><a href="#">Euro</a></li>
+                                            <li><a href="#">Real</a></li>
+                                            <li><a href="#">BDT</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="setting-content2-right">
+                                    {%if user.is_authenticated%}
+                                    <a  href="{% url 'dashboard'%}">my Account</a>
+                                    <a href="{% url 'logout'%}">Sign out</a>
+                                    {%elif not user.is_authenticated%}
+                                    <a href="{% url 'login'%}">Sign in</a>
+                                    {%endif%}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="header-middle border-top-2 bg-black-3">
+                <div class="container-fluid">
+                    <div class="row align-items-center">
+                        <div class="col-lg-2">
+                            <div class="logo">
+                                <a href="{% url 'home'%}"><img src="{% static 'images/logo/logo.png'%}" alt="logo" style="width: 80%; margin-bottom:1px"></a>
+                            </div>
+                        </div>
+                        <div class="col-lg-9">
+                            <div class="header-contact-search-wrap">
+                                <div class="header-contact">
+                                    <ul>
+                                        <li><i class="la la-phone mr-0" ></i>(+1) (205) 6390763</li>
+                                        <li><i class="la la-comments-o pl-0"></i> <a href="">Support@classicmanda.net</a></li>
+                                    </ul>
+                                </div>
+                                <div class="search-style-3">
+                                        <div class="form-search-3">
+                                            <form id="search "method="GET"  action="{% url 'search'%}">
+                                                <input type="text" name="keywords"  placeholder="Search entire store…">
+                                                <button type="submit" class="button-search"><i class="la la-search"></i></button>
+                                            </form>
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-1">
+                            <div class="cart-wrap cart-wrap-3">
+                                <button class="cart-active">
+                                    <i class="la la-shopping-cart"></i> <br>
+                                    <span class="count-style-3">0</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="header-bottom sticky-bar">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-12 d-flex justify-content-center">
+                            <div class="main-menu menu-common-style menu-lh-4  menu-font-2">
+                                <nav>
+                                    <ul>
+                                        <li class="menu-item-has-children"><a href="{% url 'vault'%}">Vaults</a></li>
+                                            <li class="menu-item-has-children"><a href="{% url 'lightning'%}">lightnings</a></li>
+                                            <li class="menu-item-has-children"><a href="{% url 'bateriesandpanels'%}">panels & Batteries</a></li>
+                                            <li class="menu-item-has-children"><a href="{% url 'mattress'%}">mattress</a></li>
+                                            <li class="menu-item-has-children"><a href="{% url 'dishwasher'%}">dishwasher</a>
+                                            <li class="menu-item-has-children"><a href="{% url 'bequipment'%}">building equipments</a></li>
+
+                                           
+                                      
+                                      
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header-small-mobile">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-6">
+                        <div class="mobile-logo">
+                            <a href="{% url 'home'%}"><img src="{% static 'images/logo/logo2.png'%}" alt="logo" style="width: 80%; margin-bottom:1px"></a>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="header-right-wrap">
+                            <div class="cart-wrap common-style">
+                               
+                              
+                         
+                            </div>
+                            <div class="mobile-off-canvas mr-60 pr-20">
+                                <a class="mobile-aside-button" href="#"><i class="la la-navicon la-2x"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="mobile-off-canvas-active">
+        <a class="mobile-aside-close"><i class="la la-close"></i></a>
+        <div class="header-mobile-aside-wrap">
+            <div class="mobile-search">
+                <form class="search-form" method="GET"  action="{% url 'search'%}">
+                    <input type="text" name="keywords"  placeholder="Search entire store…">
+                    <button type="submit" class="button-search"><i class="la la-search"></i></button>
+                </form>
+            </div>
+            <div class="mobile-menu-wrap">
+                <!-- mobile menu start -->
+                <div class="mobile-navigation">
+                    <!-- mobile menu navigation start -->
+                    <nav>
+                        <ul class="mobile-menu">
+                            <li class="menu-item-has-children"><a href="{% url 'vault'%}">Vaults</a></li>
+                            <li class="menu-item-has-children"><a href="{% url 'lightning'%}">lightnings</a></li>
+                            <li class="menu-item-has-children"><a href="{% url 'bateriesandpanels'%}">panels & Batteries</a></li>
+                            <li class="menu-item-has-children"><a href="{% url 'mattress'%}">mattress</a></li>
+                            <li class="menu-item-has-children"><a href="{% url 'dishwasher'%}">dishwasher</a>
+                            <li class="menu-item-has-children"><a href="{% url 'bequipment'%}">building equipments</a></li>
+
+                           
+                        </ul>
+                    </nav>
+                    <!-- mobile menu navigation end -->
+                </div>
+                <!-- mobile menu end -->
+            </div>
+            <div class="mobile-curr-lang-wrap">
+                <div class="single-mobile-curr-lang">
+                    <a class="mobile-language-active" href="#">Language <i class="la la-angle-down"></i></a>
+                    <div class="lang-curr-dropdown lang-dropdown-active">
+                        <ul>
+                            <li><a href="#">English (US)</a></li>
+                            <li><a href="#">English (UK)</a></li>
+                            <li><a href="#">Spanish</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="single-mobile-curr-lang">
+                    <a class="mobile-currency-active" href="#">Currency <i class="la la-angle-down"></i></a>
+                    <div class="lang-curr-dropdown curr-dropdown-active">
+                        <ul>
+                            <li><a href="#">USD</a></li>
+                            <li><a href="#">EUR</a></li>
+                            <li><a href="#">Real</a></li>
+                            <li><a href="#">BDT</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="single-mobile-curr-lang">
+                    <a class="mobile-account-active" href="">My Account <i class="la la-angle-down"></i></a>
+                    <div class="lang-curr-dropdown account-dropdown-active">
+                        <ul>
+                            <li><a href="{% url 'login'%}">Login</a></li>
+                            <li><a href="{% url 'register'%}">Creat Account</a></li>
+                            <li><a href="{% url 'dashboard'%}">dashboard</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

@@ -1,0 +1,41 @@
+{% extends 'base.html'%}
+{%load static%}
+{% block content%}
+ <div class="container pt-50 pb-50">
+     <div class="row">
+         <div class="col-md-2"></div>
+         <div class="col-md-8">
+           <h3 class="text-dark mb-5">terms</h3>
+            <P class="text-left">
+                <b>Welcome to the Classicmanda Store terms and conditions</b>, which apply to all items ordered from Classicmanda Store. Please read through them carefully before placing your order. By using this website and/or placing an order you agree to be bound by the terms and conditions set out below. Please also read our Privacy Policy regarding personal information provided by you. We may change these terms and conditions from time to time without notice to you. Changes will apply to any subsequent orders received. Once your order has been confirmed, we will not be able to make any changes to the terms that apply to that order.
+
+            </P>
+           <h3 class="text-dark mb-5">Products, warranties, and delivery</h3>
+            <P class="text-left">
+                These warranties replace all other warranties, expressed or implied including, but not limited to, the implied warranties of merchantability and fitness for a particular purpose. Classicmanda Store makes no expressed warranties beyond those stated here. Classicmanda Store disclaims all other warranties, expressed or implied including, without limitation, implied warranties of merchantability and fitness for a particular purpose. Some jurisdictions do not allow the exclusion of implied warranties so this limitation may not apply. All expressed and implied warranties are limited in duration to the limited warranty period. No warranties apply after that period. Some jurisdictions do not allow limitations on how long an implied warranty lasts, so this limitation may not apply to you.
+            </P>
+           <h3 class="text-dark mb-5">Product Pricing and Payment</h3>
+            <P class="text-left">
+                    The prices shown on this Website at the time of ordering are guide prices. The prices you will be charged for goods will be the actual prices displayed in the store at which your goods are selected on the day of delivery, including any promotional offers if applicable. You accept that prices of goods may, therefore, increase or decrease between the day of ordering and the day of delivery.
+
+                    The weight of some goods may vary marginally from that ordered and the price may change to reflect actual weight - if it weighs a little less you pay a little less and if it weighs a little more you pay a little more. Prices in 'My basket' are estimates only. Where applicable, prices include Value Added Tax. The prices on the website reflect the current rate of VAT and not necessarily the rate you will be charged on the day of your delivery. Business customers may obtain a VAT receipt by contacting our Customer Care Team by email.
+                    
+                    You will not be charged until your order is ready for delivery. Payment will be taken on the day of delivery to cover the cost of all goods ordered and any alternative substituted goods at the in-store selling price prevailing that day, as well as the delivery charge. If, on the delivery date, we are unable to process your credit card payment, our Customer Care Team will contact you to request new details. Once these are authorised your delivery will be made.
+            </P>
+           <h3 class="text-dark mb-5">Termination</h3>
+            <P class="text-left">
+                We may terminate your membership / order immediately if you breach any of these Terms of use, or if we are unable to verify or authenticate any information you provide to us. You may terminate your un-processed Order at any time by contacting us at [email protected]
+            </P>
+           <h3 class="text-dark mb-5">Indemnification</h3>
+            <P class="text-left">
+                You agree to indemnify Classicmanda Store from and against any and all claims and damages of any kind (including attorneys' fees) resulting from your use of the classicmanda.net Web Site, your breach of any provision of these Terms of Use and/or any intentional wrongdoing by you. We reserve the right to report any wrongdoing, if we become aware of it, to the applicable government agencies or otherwise.
+            </P>
+           
+             <a href="{% url 'contact'%}" class="btn btn-outline-primary btn-lg px-5 py-3  mt-4 ">Contact Us</a>
+         </div>
+         <div class="col-md-2"></div>
+
+        
+     </div>
+ </div>
+        {% endblock%}
