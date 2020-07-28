@@ -13,9 +13,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '=xjj!4*s*m^$yofl2pfp@&rdleu#987305ny17uoghrcm74308'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['classicmanda.herokuapp.com']
 
 
 # Application definition
@@ -67,13 +67,15 @@ WSGI_APPLICATION = 'classicmanda.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'classicmanda',
+        'USER': "postgres",
+        "PASSWORD": 'localhost',
+        "HOST": 'localhost'
     }
 }
 
 import dj_database_url
-
 db_from_env = dj_database_url.config()
 DATABASES['default'].update(db_from_env)
 
@@ -125,3 +127,4 @@ MESSAGE_TAGS = {
     messages.ERROR: 'danger',
 }
 django_heroku.settings(locals())
+
